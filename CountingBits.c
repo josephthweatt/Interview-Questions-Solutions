@@ -5,8 +5,10 @@
  * Note: The returned array must be malloced, assume caller calls free().
  */
 int* countBits(int num, int* returnSize) {
+	// important to note, initializing with calloc is faster than
+	// with malloc. malloc will zero memory faster
     *returnSize = num + 1;
-    int *result = (int *) malloc(sizeof(int) * (*returnSize));
+    int *bitList = calloc (*returnSize, sizeof(int));
     result[0] = 0;
     if (num == 0) return result;
     for (int i = 1; i < num + 1; i++) {
