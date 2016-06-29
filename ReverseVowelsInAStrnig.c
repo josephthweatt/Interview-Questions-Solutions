@@ -1,3 +1,7 @@
+/**
+* Written by: Joseph Thweatt
+* Runtime: NA
+*/
 #include <stdio.h>
 #include <string.h>
 

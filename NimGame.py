@@ -1,3 +1,6 @@
+# Written by: Joseph Thweatt
+# Runtime: NA
+
 class Solution(object):
     def canWinNim(self, n):
         """

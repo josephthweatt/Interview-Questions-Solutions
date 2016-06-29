@@ -1,3 +1,7 @@
+/**
+* Written by: Joseph Thweatt
+* Runtime: NA
+*/
 char* reverseString(char* s) {
     int size = strlen(s);
     char temp;

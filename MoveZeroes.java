@@ -1,4 +1,7 @@
 /********************************************************
+* Written by: Joseph Thweatt
+* Runtime: 20x faster than the c code of the same solution
+*
 * Given an array nums, write a function to move all 0's 
 * to the end of it while maintaining the relative order
 * of the non-zero elements.

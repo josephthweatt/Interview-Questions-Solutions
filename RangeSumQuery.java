@@ -1,3 +1,8 @@
+/**
+* Written by: Joseph Thweatt
+* Runtime: NA
+*/
+
 import java.util.HashMap;
 
 public class RangeSumQuery {
