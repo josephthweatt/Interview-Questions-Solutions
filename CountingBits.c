@@ -1,9 +1,11 @@
-#include <math.h>
-
 /**
+ * Writen by: Joseph Thweatt
+ * Runtime: N/A
  * Return an array of size *returnSize.
  * Note: The returned array must be malloced, assume caller calls free().
  */
+#include <math.h>
+
 int* countBits(int num, int* returnSize) {
 	// important to note, initializing with calloc is faster than
 	// with malloc. malloc will zero memory faster
