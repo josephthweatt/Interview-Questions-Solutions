@@ -8,7 +8,7 @@ This is a repository for ASU students in CS related majors to share solutions fo
 ### Guidelines for adding solutions
 -----------------------------------
  - Files should be given the same title as the question
- - Create your own branch and add your solutions there. Then, submit a pull request so everyone is aware of changes being merged to the main branch.
+ - Create your own branch and add your solutions there. Then, merge your changes into the main branch when you are ready to discuss your work.
  - In each solution, put your name, the runtime of the code, and the question description in the header.
  
     ```java
