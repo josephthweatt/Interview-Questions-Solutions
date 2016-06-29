@@ -1,3 +1,7 @@
+/**
+ * Writen by: Joseph Thweatt
+ * Runtime: N/A
+ */
 import java.util.HashMap;
 
 public class BullsAndCows {
