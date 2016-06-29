@@ -1,4 +1,6 @@
 /**
+ * Written By: Joseph Thweatt
+ * Runtime: NA
  * Given two arrays, write a function to compute their intersection.
  * @param {number[]} nums1
  * @param {number[]} nums2
