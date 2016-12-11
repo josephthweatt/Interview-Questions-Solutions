@@ -1,11 +1,10 @@
 /*
  * Written by: Joseph Thweatt
- * Runtime: 10 ms
+ * Runtime: 8 ms
  *
  * Given a collection of distinct 
  * numbers, return all possible permutations.
  */
- 
 import java.util.List;
 import java.util.ArrayList;
 
@@ -14,10 +13,7 @@ public class Solution {
         List<List<Integer>> permutes = new ArrayList<List<Integer>>();
 		List<Integer> permute = new ArrayList<Integer>();
         
-        if (nums.length == 0) {
-            permutes.add(permute);
-            return permutes;
-        } else if (nums.length == 1) {
+        if (nums.length == 1) {
 			permute.add(nums[0]);
             permutes.add(permute);
 			return permutes;
@@ -35,18 +31,28 @@ public class Solution {
 
 			return permutes;
 		}
+		
+		int[] subNums = new int[nums.length - 1];
+		System.arraycopy(nums, 1, subNums, 0, subNums.length);
+		List<List<Integer>> subPermutes = permute(subNums);
 
-		for (int i = 0; i < nums.length; i++) {
+		for (int p = 0; p < subPermutes.size(); p++) {
+			permute.add(nums[0]);
+			permute.addAll(subPermutes.get(p));
+			permutes.add(permute);
 
-			if (i != 0) {
-				int temp = nums[i];
-				nums[i] = nums[0];
-				nums[0] = temp;
-			}
+			permute = new ArrayList<Integer>();
+		}
 
-			int[] subNums = new int[nums.length - 1];
+		for (int i = 1; i < nums.length; i++) {
+
+			int temp = nums[i];
+			nums[i] = nums[0];
+			nums[0] = temp;
+
+			subNums = new int[nums.length - 1];
 			System.arraycopy(nums, 1, subNums, 0, subNums.length);
-			List<List<Integer>> subPermutes = permute(subNums);
+			subPermutes = permute(subNums);
 
 			for (int p = 0; p < subPermutes.size(); p++) {
 				permute.add(nums[0]);
