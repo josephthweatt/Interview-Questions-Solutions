@@ -1,16 +1,15 @@
-#include <iostream>
-
 /**
  * Written By: Joseph Thweatt
  * Runtime: 9 ms
  *
  * Implement atoi to convert a string to an integer.
  */
+#include <iostream>
 
 class Solution {
-    
+
     public:
-    
+
         int myAtoi(string str) {
 			bool isNum = false;
 			bool isNeg = false;
@@ -29,20 +28,20 @@ class Solution {
 				    start++;
 				    isNum = true;
 				} else if  (c != ' ') {
-				    start = str.size(); // jump to end    
+				    start = str.size(); // jump to end
 				} else {
 					start++;
 				}
 			}
-			
+
 			if (isNeg) {
 			    end = start + 1;
 			} else {
     			end = start;
 			}
-			
+
 			while (end < str.size() && isNum) {
-			    
+
 			    if (!std::isdigit(str.at(end))) {
 			        isNum = false;
 			    } else {
@@ -52,7 +51,7 @@ class Solution {
 
 			if (end <= str.size() && start != end) {
 			    str = str.substr(start, end);
-			    
+
 				const char *strChar = str.c_str();
 				number = std::atoi(strChar);
 
@@ -65,5 +64,5 @@ class Solution {
 
 			return number;
 		}
-        
+
 };

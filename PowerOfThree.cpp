@@ -5,7 +5,6 @@
 * Follow up:
 * Could you do it without using any loop / recursion?
 *******************************************************************************/
-
 #include <Math.h>
 
 class Solution {

@@ -1,3 +1,18 @@
+/******************************************************************
+* Written by: Joseph Thweatt
+* Runtime: Unknown
+*
+* Given two strings, a and b, that may or may not be of the same
+* length, determine the minimum number of character deletions
+* required to make a and b anagrams. Any characters can be deleted
+* from either of the strings.
+*
+* Note: A big lesson learned here about iterating through cpp's
+*       map. DO NOT erase map's pairs while iterating through it.
+*       Iterators have a complicated internal behavior, and the
+*       order in which it traverses maps & sets can get derailed
+*       when data is removed.
+******************************************************************/
 #include <map>
 #include <set>
 #include <list>
@@ -20,16 +35,6 @@
 #include <iostream>
 #include <algorithm>
 #include <unordered_map>
-
-/******************************************************************
-* Written by: Joseph Thweatt
-* Runtime: Unknown
-*
-* Given two strings, a and b, that may or may not be of the same
-* length, determine the minimum number of character deletions
-* required to make a and b anagrams. Any characters can be deleted
-* from either of the strings.
-******************************************************************/
 
 using namespace std;
 
