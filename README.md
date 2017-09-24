@@ -3,7 +3,6 @@ This is a repository for ASU students in CS related majors to share solutions fo
 ### Current Members
 -------------------
  - [Joseph Thweatt]
- - [John Nguyen]
 
 ### Guidelines for adding solutions
 -----------------------------------
