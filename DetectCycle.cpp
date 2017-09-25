@@ -12,6 +12,7 @@
 */
 #include <set>
 
+// set solution
 bool has_cycle(Node* head) {
     if (head == NULL) return 0;
 
@@ -24,6 +25,23 @@ bool has_cycle(Node* head) {
         }
         past.insert(head);
         head = head->next;
+    }
+    return 0;
+}
+
+// fast-slow solution (better answer)
+bool has_cycle(Node* head) {
+    if (head == NULL) return 0;
+
+    Node *fast = head;
+    Node *slow = head;
+    while (fast != NULL && slow != NULL && fast->next != NULL) {
+        fast = fast->next->next;
+        slow = slow->next;
+
+        if (fast == slow) {
+            return 1;
+        }
     }
     return 0;
 }
