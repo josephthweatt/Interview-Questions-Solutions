@@ -1,6 +1,6 @@
 /*
  * Written by: Joseph Thweatt
- * Runtime: 308 ms
+ * Runtime: 19 ms
  * 
  * Given an array of strings, group anagrams together.
  */
